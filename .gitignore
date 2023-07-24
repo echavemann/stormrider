@@ -1,2 +1,6 @@
 env
+CMakeCache.txt
+cmake_install.cmake
 *.so
+CMakeFiles
+_deps
