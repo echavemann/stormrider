@@ -1,7 +1,8 @@
 # Stormrider
+Unhinged - Raw Speed. 
 
 (WIP) Pybound HTTP Client.   
-GET: Currently ~33% faster than requests over 10000 calls.
+GET: Currently TBD% faster than requests over 10000 calls.
 
 How to build:   
 `mkdir build`   
