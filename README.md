@@ -1,7 +1,7 @@
 # Stormrider
 
-(WIP) C++ HTTP Client.   
-GET: Currently about 35% faster than requests over 1000 calls.
+(WIP) Pybound HTTP Client.   
+GET: Currently ~33% faster than requests over 10000 calls.
 
 How to build:   
 `mkdir build`   
