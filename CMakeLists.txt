@@ -1,6 +1,15 @@
 cmake_minimum_required(VERSION 3.11)
 project(Stormrider)
 
+
+if(NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE "Release")
+endif()
+
+if(CMAKE_BUILD_TYPE STREQUAL "Release")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3") #time to fly
+endif()
+
 # Add Pybind11
 include(FetchContent)
 set(PYBIND11_VERSION 2.8.1)
