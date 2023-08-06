@@ -1,5 +1,6 @@
 #include <curl/curl.h>
 #include <iostream>
+#include <pybind11/pybind11.h>
 
 size_t Callback(void* contents, size_t size, size_t nmeb, std::string* output) {
     size_t total_size = size*nmeb;
@@ -20,10 +21,8 @@ std::string get(const std::string& url) {
         if (res != CURLE_OK) {
             std::cerr << "Failed to perform request: " << curl_easy_strerror(res) << std::endl;
         }
-
         curl_easy_cleanup(curl);
     }
-
     return response;
 }
 
@@ -31,4 +30,8 @@ int main() {
     std::string url = "https://google.com";
     std::string res = get(url);
     std::cout << res << std::endl;
+}
+
+PYBIND11_MODULE(caller, m) {
+    m.def("get", &get, "function that calls http get");
 }

@@ -1,2 +1,4 @@
 import cppimport.import_hook
-import example
+from build import caller
+
+print(caller.get("https://google.com"))
